@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>184.Um pouco mais sobre métodos</title>
+</head>
+<body>
+    
+    <script>
+        const cachorro = {
+            raca: "RND",
+            uivar: function(){
+                console.log("aaauuuuuuuuuu");
+            },
+            rosnar: function(){
+                console.log("ggggrrrrrrr");
+            },
+            setRaca: function(raca){
+                this.raca = raca;
+            },
+            getRaca: function(){
+                return `A raça é ${this.raca}`;
+            }
+        }
+
+        console.log(cachorro.raca);
+
+        cachorro.setRaca("Pastor Alemão");
+
+        console.log(cachorro.raca);
+
+        console.log(cachorro.getRaca());
+    </script>
+</body>
+</html>

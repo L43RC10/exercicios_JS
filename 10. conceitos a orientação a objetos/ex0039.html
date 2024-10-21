@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>186.Avançando em prototypes</title>
+</head>
+<body>
+    
+    <script>
+        const pessoa = {
+            maos: 2,
+        }
+
+        // console.log(Object.getPrototypeOf(pessoa));
+        // console.log(Object.getPrototypeOf(pessoa) === Object.prototype);
+
+        // console.log(pessoa.hasOwnProperty('maos'));
+
+        const pessoaNova = Object.create(pessoa);
+
+        console.log(pessoaNova.maos);
+        console.log(pessoaNova.hasOwnProperty('maos'));
+        console.log(Object.getPrototypeOf(pessoaNova) === pessoa );
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>187.Classes</title>
+</head>
+<body>
+    
+    <script>
+        let cachorro = {
+            patas: "4",
+            raca: "SRD",
+            latir: function(){
+                "au au";
+            }
+        }
+
+        let labrador = Object.create(cachorro);
+        labrador.raca = "Labrador";
+        console.log(labrador.raca);
+        console.log(cachorro.raca);
+
+        let pastorAlemao = Object.create(cachorro);
+        pastorAlemao.raca = "Pastor Alemão";
+        console.log(pastorAlemao.raca);
+    </script>
+</body>
+</html>

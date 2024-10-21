@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>196. Herança</title>
+</head>
+<body>
+    
+    <script>
+        class Mamiferos {
+            constructor(patas) {
+                this.patas = patas;
+            }
+        }
+
+        let coiote = new Mamiferos(4);
+
+        console.log(coiote.patas);
+
+        class Cachorro extends Mamiferos {
+            constructor(patas, raca) {
+                super(patas, patas);
+                this.raca = raca;
+            }
+
+            latir() {
+                console.log("au au");
+            }
+        }
+
+        let pug = new Cachorro(4, "Pug");
+
+        console.log(pug.patas);
+
+        pug.latir();
+    </script>
+</body>
+</html>

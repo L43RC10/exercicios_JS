@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>192. Métodos e propriedades em uma Class</title>
+</head>
+<body>
+    
+    <script>
+        class Cachorro{
+            constructor(raca, cor){
+                this.raca = raca;
+                this.cor = cor;
+            }
+
+            latir(){
+                console.log("au au");
+            }
+        }
+
+        Cachorro.prototype.patas = 4;
+
+        let labrador = new Cachorro("Labrador", "Amarelo");
+
+        console.log(labrador.patas);
+
+        labrador.latir();
+
+    </script>
+</body>
+</html>

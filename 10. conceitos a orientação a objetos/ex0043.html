@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>190.Métodos no prototype</title>
+</head>
+<body>
+    
+    <script>
+        function Cachorro(raca, tamanho, cor){
+            this.raca = raca;
+            this.tamanho = tamanho;
+            this.cor = cor;
+        }
+
+        Cachorro.prototype.uivar = function(){
+            console.log("aauuu");
+        }
+
+        Cachorro.prototype.latir = function(){
+            console.log("au au");
+        }
+
+        let sibiriano = new Cachorro("Husky", "grande", "canela");
+
+        console.log(sibiriano);
+        sibiriano.uivar();
+        sibiriano.latir();
+    </script>
+</body>
+</html>
