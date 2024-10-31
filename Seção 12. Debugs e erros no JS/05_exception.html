@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception</title>
+</head>
+<body>
+    
+    <script>
+
+        function saudacao(nome){
+            if(typeof nome != 'string'){
+                throw new Error('O parametro nome precisa ser uma string...')
+            } else {
+                console.log(`Olá ${nome}.`);
+            }
+        }
+
+        saudacao('Laercio');
+
+        saudacao(5);
+
+        saudacao('teste');
+
+    </script>
+</body>
+</html>
