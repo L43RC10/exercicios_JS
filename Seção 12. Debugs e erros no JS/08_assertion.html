@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_assertion</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [1,2,3,4,5];
+        let arr2 = [];
+
+        function iterarArray(arr){
+            if(arr.length == 0){
+                throw new Error('O array precisa ter ao menos um elemento');
+            } else {
+                for(let i = 0; i < arr.length; i++){
+                    console.log(i);
+                }
+            }
+        }
+
+        function arrayVazio(arr2){
+            if(arr2.length > 0){
+                throw new Error('o array não pode ter elementos');
+            } else {
+                console.log('tudo certo.');
+            }
+        }
+
+        iterarArray(arr);
+        iterarArray(arr);
+
+        arrayVazio(arr2);
+    </script>
+</body>
+</html>
