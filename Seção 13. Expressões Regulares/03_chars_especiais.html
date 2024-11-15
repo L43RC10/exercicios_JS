@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_chars_especiais</title>
+</head>
+<body>
+    
+    <script>
+        const pontoRegex = /./;
+        console.log('.');
+        console.log(pontoRegex.test('asfd'));
+        console.log(pontoRegex.test(''));
+        console.log(pontoRegex.test('123'));
+        console.log(pontoRegex.test('asfd123'));
+
+        
+        const dRegex = /\d/;
+        console.log('\d');
+        console.log(pontoRegex.test('asfd'));
+        console.log(pontoRegex.test(''));
+        console.log(pontoRegex.test('123'));
+        console.log(pontoRegex.test('asfd123'));
+        
+        const dRegex2 = /\D/;
+        console.log('\D');
+        console.log(pontoRegex.test('asfd'));
+        console.log(pontoRegex.test(''));
+        console.log(pontoRegex.test('123'));
+        console.log(pontoRegex.test('asfd123'));
+        
+        const sRegex = /\s/;
+        console.log('\s');
+        console.log(pontoRegex.test('asfd'));
+        console.log(pontoRegex.test(''));
+        console.log(pontoRegex.test('123'));
+        console.log(pontoRegex.test('asfd123'));
+        
+        const wRegex = /\w/;
+        console.log('\w');
+        console.log(pontoRegex.test('asfd'));
+        console.log(pontoRegex.test(''));
+        console.log(pontoRegex.test('123'));
+        console.log(pontoRegex.test('asfd123'));
+
+    </script>
+</body>
+</html>
