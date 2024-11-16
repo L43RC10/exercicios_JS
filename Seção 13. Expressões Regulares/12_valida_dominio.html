@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_valida_dominio</title>
+</head>
+<body>
+    
+    <script>
+        const validaDominio = /[?www.]\w+\.com.br|.com/;
+        console.log(validaDominio.test('www.google.com'));
+        console.log(validaDominio.test('www.google.com.br'));
+        console.log(validaDominio.test('www.google'));
+        console.log(validaDominio.test('google.com'));
+    </script>
+</body>
+</html>
