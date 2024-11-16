@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_operador_question</title>
+</head>
+<body>
+    
+    <script>
+
+        const padrao = /Abacax?i/;
+        console.log(padrao.test('Abacaxi'));
+        console.log(padrao.test('Abacai'));
+
+        const padrao2 = /\d+\w?/;
+        console.log(padrao2.test('123'));
+        console.log(padrao2.test('123a'));
+        console.log(padrao2.test('123 '));
+    </script>
+</body>
+</html>
