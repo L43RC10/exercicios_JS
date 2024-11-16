@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_chars_esp_op-not</title>
+</head>
+<body>
+    
+    <script>
+
+        const notab = /[^ab]/;
+        console.log('notab');
+        console.log(notab.test('a'));
+        console.log(notab.test('Aqui tem a'));
+
+        const notetoaz = /[^a-z]/;
+        console.log('notetoaz');
+        console.log(notetoaz.test('123151'));
+        console.log(notetoaz.test('manbaqbnjkanfuanwe'));
+
+        const apenasNumeros = /[0-9][^a-z]/;
+        console.log('apenasNumeros');
+        console.log(apenasNumeros.test('1abafdb5afbadba'));
+        console.log(apenasNumeros.test('156189165498'));
+        
+    </script>
+</body>
+</html>
