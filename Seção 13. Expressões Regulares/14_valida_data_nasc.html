@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_valida_data_nasc</title>
+</head>
+<body>
+    
+    <script>
+        const validarDataNasc = /[01-31]{2}[/][01-12]{2}[/][1920-2025]{4}/;
+        console.log(validarDataNasc.test('05/02/2000'));
+        console.log(validarDataNasc.test('5/2/2000'));
+        console.log(validarDataNasc.test('05-02-2000'));
+        console.log(validarDataNasc.test('12/12/1999'));
+        console.log(validarDataNasc.test('99/99/9999'));
+        console.log(validarDataNasc.test('31/00/2010'));
+    </script>
+</body>
+</html>
