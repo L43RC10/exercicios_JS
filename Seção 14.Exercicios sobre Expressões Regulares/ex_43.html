@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_43</title>
+</head>
+<body>
+    
+    <script>
+        const marca = /\w+: (Nike|Adidas|Puma|Asics)/;
+
+        console.log(marca.test('Marca: Adidas'));
+        console.log(marca.test('Marca: Fila'));
+        console.log(marca.test('Marca:'));
+        console.log(marca.test('Fila'));
+        console.log(marca.test('3135'));
+        console.log(marca.test('Marca: Puma'));
+    </script>
+</body>
+</html>
