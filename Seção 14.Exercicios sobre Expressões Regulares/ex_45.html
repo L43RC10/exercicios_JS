@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_45</title>
+</head>
+<body>
+    
+    <script>
+        const validarNomeUsuario = /^(?=.{3,16}$)[a-z0-9-_]/;
+
+        console.log(validarNomeUsuario.test('laercio_123'));
+        console.log(validarNomeUsuario.test('12'));
+        console.log(validarNomeUsuario.test('15619819888888888888888888888881811'));
+    </script>
+</body>
+</html>
+
+
+<!-- 
+    SOLUÇÃO DA AULA 250 ^(?=.{3,15}$)
+0 votos a favor
+Renan Felipe C · Aula 254
+· 2 anos atrás
+
+Vamos que vou te explicar o que eu entendi e até agora está batendo rs.
+
+
+^(?=.{3,15}$)
+
+
+^ Significa que começou ali, é o ponto de partida e ele vem antes dos parênteses, naquele exemplo, para falar que já no inicio tem que atender essa configuração ' (?=.{3,15}$) ' de inicio para dar TRUE o código
+
+() Significa que aquilo ali dentro vai ter que ser resolvido junto e não em sequencia como se tivesse fora.
+
+?= Está afirmando que a partir dali, para dar TRUE, tem que está dentro da regra, é obrigatório que seja .{3,15}$
+
+. Corresponde um único caractere qualquer e combinado com o {3,15} está querendo falar que ao invés de 1 caractere, agora são grupos entre 3 até 15 caracteres.O ponto muda seu sentido se você associar com mais alguns.
+
+{3,15} Significa que é algo entre 3 e 15, só vai dar o sentido de 'Número entre 3 e 15' colocando o ' . ' antes dele.
+
+$ Representa o fim.. é como se falasse que ali é o fim do calculo
+
+
+Só percebi que o professor no exemplo colocou o código dele para funcionar apenas com letra minúsculas então fiz um upgrade haha
+
+    let validarNomeUsuario = /^(?=.{3,16}$)[a-zA-Z0-9-_]/
+
+
+Se vocês quiserem ficar mais por dentro acessem os sites:
+
+
+1 - Guia incrível de regex para você ficar afiado.
+
+https://medium.com/xp-inc/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f
+
+
+2- Site onde você pode testar seus conhecimentos de regex em tempo real e já tem modelos prontos de regex pra você tratar seus inputs, dê uma olhada em community patterns >clica no modelo > dê LOAD e seja feliz
+
+https://regexr.com/
+
+
+3- Parecido com o de cima, mas tem outras funções adicionais. É o meu favorito para treinar meus códigos de Regex, recomendo.
+
+https://regex101.com/
+
+
+4- Leia bastante o número 1 e vai brincado com os outros 2. Se tiver muito perdido, joga no youtube Regex.
+
+
+Me siga no linkedin para dúvidas: www.linkedin.com/in/renanpaes92
+ -->
