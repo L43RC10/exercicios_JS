@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_promises_falha</title>
+</head>
+<body>
+    
+    <script>
+
+        let p = Promise.resolve(new Error('Não deu certo...'));
+
+        console.log('lalala..');
+
+        p.then(valor => console.log(valor))
+         .catch(reason => console.log(`Falhou: ${reason}`));
+
+    </script>
+</body>
+</html>
