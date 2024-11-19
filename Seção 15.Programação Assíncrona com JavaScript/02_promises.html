@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_promises</title>
+</head>
+<body>
+    
+    <script>
+        let p = Promise.resolve(3);
+
+        console.log('Outros códigos...');
+
+        console.log(p);
+
+        // p.then((valor) => {
+        //     console.log(`O valor é ${valor}`)
+        // });
+
+        p.then((valor) => {return valor + 7})
+         .then((valor) => {console.log(valor)});
+    </script>
+</body>
+</html>
