@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_await</title>
+</head>
+<body>
+    
+    <script>
+        
+        function somaComDelay(a,b){
+            return new Promise(resolve => {
+                setTimeout(function(){
+                    resolve(a+b);
+                }, 4000);
+            })
+        }
+
+        async function resSoma(a,b,c){
+            let x = somaComDelay(a,b);
+            let y = c;
+
+            return await x + y;
+        }
+
+        resSoma(1,2,7).then(valor => console.log(valor));
+
+    </script>
+</body>
+</html>
