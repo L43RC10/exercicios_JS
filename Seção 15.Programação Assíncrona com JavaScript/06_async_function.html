@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_async_function</title>
+</head>
+<body>
+    
+    <script>
+        
+        async function somar(a,b){
+            return a + b;
+        }
+
+        console.log(somar(2,4));
+
+        somar(2,4).then(valor => console.log(valor));
+
+    </script>
+</body>
+</html>
