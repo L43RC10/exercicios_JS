@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_promises_all</title>
+</head>
+<body>
+    
+    <script>
+        
+        const p1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                resolve('p1');
+            }, 5000);
+        });
+
+        const p2 = Promise.resolve('p2');
+
+        const p3 = new Promise((resolve, reject) => {
+            resolve('p3');
+        });
+
+        Promise.all([p1, p2, p3]).then((valores) => console.log(valores));
+
+    </script>
+</body>
+</html>
