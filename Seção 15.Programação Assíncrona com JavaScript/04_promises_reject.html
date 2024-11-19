@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_promises_reject</title>
+</head>
+<body>
+    
+    <script>
+        
+        function verificarNumero(num){
+            return new Promise((resolve, reject) => {
+                if(num == 2){
+                    resolve(console.log(`O número é ${num}.`));
+                } else {
+                    reject(new Error('Falhou'));
+                }
+            });
+        }
+
+        verificarNumero(2);
+        verificarNumero(3);
+
+    </script>
+</body>
+</html>
