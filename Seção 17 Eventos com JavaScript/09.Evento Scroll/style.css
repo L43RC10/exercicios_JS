@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#tamanho {
+    background-color: orange;
+    height: 2000px;
+}
