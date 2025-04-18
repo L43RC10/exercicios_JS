@@ -21,6 +21,7 @@ h1 {
     width: 300px;
     margin: 0;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
     margin: auto;
@@ -83,9 +84,37 @@ h1 {
     font-size: 25px;
 }
 
+.score-box {
+    margin: 0 20px;
+}
+
 #x-scoreboard {
     color: red;
     margin-right: 3px;
 }
 
-/* aula 308 - 8:53 */
+#o-scoreboard {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid green;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+/* msg de vitória */
+
+#message p {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 150px;
+    width: 500px;
+    font-size: 50px;
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
