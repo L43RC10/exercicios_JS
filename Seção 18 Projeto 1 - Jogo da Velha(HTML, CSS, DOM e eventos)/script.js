@@ -10,22 +10,15 @@ let secondPlayer;
 let player1 = 0;
 let player2 = 0;
 
-// add o evento de click aos boxes
+// adiciona o evento de click aos boxes
 for(let i = 0; i < boxes.length; i++){
     
     // quando alguem clica na caixa
     boxes[i].addEventListener("click", function(){
 
-        let elemento;
+        let elemento = checkElemento(player1, player2);
 
-        if(player1 == player2) {
-            // x
-            elemento = x;
-        } else {
-            // o
-            elemento = o;
-        }
-
+        // verifica se ja tem x ou o
         if(this.childNodes.length == 0){
 
             let cloneElemento = elemento.cloneNode(true);
@@ -39,8 +32,24 @@ for(let i = 0; i < boxes.length; i++){
             } else {
                 player2++;
             }
-            
+
         }
 
     });
+}
+
+// ve quem vai jogar
+
+function checkElemento(player1, player2){
+
+    if(player1 == player2) {
+        // x
+        elemento = x;
+    } else {
+        // o
+        elemento = o;
+    }
+
+    return elemento;
+
 }
