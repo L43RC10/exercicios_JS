@@ -15,10 +15,32 @@ for(let i = 0; i < boxes.length; i++){
     
     // quando alguem clica na caixa
     boxes[i].addEventListener("click", function(){
+
+        let elemento;
+
         if(player1 == player2) {
             // x
+            elemento = x;
         } else {
             // o
+            elemento = o;
         }
-    })
+
+        if(this.childNodes.length == 0){
+
+            let cloneElemento = elemento.cloneNode(true);
+
+            this.appendChild(cloneElemento);
+
+            // computar jogada
+
+            if(player1 == player2){
+                player1++;
+            } else {
+                player2++;
+            }
+            
+        }
+
+    });
 }
