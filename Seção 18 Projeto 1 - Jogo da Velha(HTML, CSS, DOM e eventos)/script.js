@@ -53,3 +53,5 @@ function checkElemento(player1, player2){
     return elemento;
 
 }
+
+// Quer levar um soco na cara?
