@@ -69,13 +69,26 @@ function checkWinCondition(){
     let b8 = document.getElementById("block-8");
     let b9 = document.getElementById("block-9");
 
+    // horizontal
     if(b1.childNodes.length > 0 && b2.childNodes.length > 0 && b3.childNodes.length > 0){
 
         let b1Child = b1.childNodes[0].className;
         let b2Child = b2.childNodes[0].className;
         let b3Child = b3.childNodes[0].className;
 
+        if(b1Child == 'x' && b2Child == 'x' && b3Child == 'x'){
+
+            console.log('x venceu');
+
+        } else if (b1Child == 'o' && b2Child == 'o' && b3Child == 'o'){
+
+            console.log('o venceu');
+
+        }
+
     }
 }
+
+// paramos no minuti 4:37 da aula 310
 
 // Quer levar um soco na cara?
