@@ -33,6 +33,9 @@ for(let i = 0; i < boxes.length; i++){
                 player2++;
             }
 
+            // checa quem venceu
+            checkWinCondition();
+
         }
 
     });
@@ -52,6 +55,11 @@ function checkElemento(player1, player2){
 
     return elemento;
 
+}
+
+// Ver quem ganhou
+function checkWinCondition(){
+    
 }
 
 // Quer levar um soco na cara?
