@@ -1,0 +1,14 @@
+{
+  "name": "320.criando-um-projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laercio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
