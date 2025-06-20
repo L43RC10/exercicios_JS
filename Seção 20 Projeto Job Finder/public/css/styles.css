@@ -33,3 +33,24 @@
     color: #F03E3E;
     border-color: #F03E3E;
 }
+
+/* banner */
+#top-container {
+    padding: 110px;
+    background-color: #F7F9FC;
+    border-bottom: 4px solid #013068;
+    margin-bottom: 30px;
+    background-image: url("../img/banner2.jpg");
+    background-position: 0 100px;
+    background-size: cover;
+    color: #FFF;
+}
+
+#main-title {
+    padding: 30ps 0;
+    font-size: 3rem;
+}
+
+#main-subtitle {
+    
+}
