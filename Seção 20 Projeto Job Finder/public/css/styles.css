@@ -29,7 +29,7 @@
     text-transform: uppercase;
 }
 
-.nav-link.btn.btn-primary:hover, #search-form button:hover {
+.nav-link.btn.btn-primary:hover, #search-form button:hover, .list-group-item a:hover {
     background-color: #FFF;
     color: #F03E3E;
     border-color: #F03E3E;
@@ -93,8 +93,8 @@
 
 #job-list .list-group-item.new-job {
     border: none;
-    /* background-color: #FFF7CC; */
-    background-color: orangered;
+    background-color: #FFF7CC;
+    /* background-color: orangered; */
 }
 
 #job-list-title {
@@ -109,4 +109,31 @@
     position: absolute;
     left: -40px;
     top: calc(50% - 40px);
+}
+
+.list-group-item a {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    height: 50px;
+    line-height: 35px;
+    background-color: #F03E3E;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.new-job-label {
+    background-color: #FFD500;
+    color: #4D5154;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    right: 250px;
+    top: 40px;
+    display: none;
+}
+
+.new-job .new-job-label {
+    display: block;
 }
