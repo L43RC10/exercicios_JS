@@ -1,5 +1,5 @@
 const express    = require('express');
-const exphbs     = require('express-handlebars')
+const exphbs     = require('express-handlebars');
 const app        = express();
 const path       = require('path');
 const db         = require('./db/connection');
@@ -16,8 +16,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // handle bars
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+// static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // db connection
 db  
@@ -29,9 +32,9 @@ db
     HTMLFormControlsCollection.log(`Ocorreu um erro ao conectar = ${err}`)
 });
 
-// rotes
+// rotas
 app.get('/', (req, res) => {
-    res.send('Esta funcionando... 1');
+    res.render('index');
 });
 
 // jobs routes
