@@ -233,3 +233,29 @@
     color: #FFF;
     text-decoration: none;
 }
+
+/* responsivo */
+
+@media (max-width: 481px){
+
+    /* navbar */
+    #navbarNav {
+        text-align: center;
+    }
+
+    /* home */
+    #top-container {
+        padding: 50px;
+        padding-top: 100px;
+    }
+
+    #main-title {
+        font-size: 2.2rem;
+        color: #F03E3E;
+    }
+
+    #main-subtitle {
+        font-size: 1.5rem;
+    }
+
+}
