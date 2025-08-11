@@ -271,7 +271,8 @@
     }
 
     .list-group-item h2 {
-        font-size: 1.1rem;
+        width: 90%;
+        font-size: 1.2rem;
         color: #F03E3E;
     }
 
@@ -283,6 +284,34 @@
 
     .new-job .new-job-label {
         display: none;
+    }
+
+    /* job view */
+    .back-link {
+        margin-left: 30px;
+    }
+
+    #job-view-container p {
+        font-size: 1.3rem;
+    }
+
+    .job-desc {
+        width: 80%;
+    }
+
+    /* add view */
+
+    #form-box {
+        padding: 25px;
+    }
+
+    #form-box h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #form-box button {
+        width: 100%;
     }
 
 }
