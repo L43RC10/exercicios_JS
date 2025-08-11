@@ -258,4 +258,31 @@
         font-size: 1.5rem;
     }
 
+    #search-form {
+        padding: 0;
+    }
+
+    #jobs-container {
+        padding: 20px;
+    }
+
+    .list-group-item {
+        padding: 15px 85px;
+    }
+
+    .list-group-item h2 {
+        font-size: 1.1rem;
+        color: #F03E3E;
+    }
+
+    .list-group-item img {
+        width: 50px;
+        left: 15px;
+        top: calc(50% -25px);
+    }
+
+    .new-job .new-job-label {
+        display: none;
+    }
+
 }
