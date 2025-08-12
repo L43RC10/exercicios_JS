@@ -226,6 +226,7 @@
     border: 1px solid #F03E3E;
     padding: 5px 10px;
     transition: .5s;
+    bottom: 0;
 }
 
 .back-link:hover {
