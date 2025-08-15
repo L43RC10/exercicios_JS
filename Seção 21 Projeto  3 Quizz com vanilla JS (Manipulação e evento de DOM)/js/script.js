@@ -8,3 +8,6 @@ let points = 0;
 let actualQuestion = 0;
 
 // Perguntas
+
+
+// paramos na aula 370, na minutagem 3:30
