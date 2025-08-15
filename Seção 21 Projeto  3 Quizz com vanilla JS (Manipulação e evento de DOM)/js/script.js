@@ -1,6 +1,6 @@
 // Declaração variaveis
 const question = document.querySelector('#question');
-const answersBox = document.querySelector('#answer-box');
+const answersBox = document.querySelector('#answers-box');
 const quizzContainer = document.querySelector('quizz-container');
 const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd'];
@@ -78,7 +78,26 @@ const questions = [
 
 function init(){
     // criar primeira pergunta
-    console.log('Inicial');
+    createQuestion(0);
 }
 
-init();
+// Cria uma pergunta
+function createQuestion(i){
+
+    // Limpar a questão anterior
+    const oldButtons = answersBox.querySelectorAll('button');
+    
+    oldButtons.forEach(function(btn){
+        btn.remove();
+    });
+
+    // Alterar o texto da pergunta
+    const questionText = question.querySelector('#question-text');
+    const questionNumber = question.querySelector('#question-number');
+
+    questionText.textContent = questions[i].question;
+    questionNumber.textContent = i + 1;
+
+}
+
+init(); 
