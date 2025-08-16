@@ -104,9 +104,30 @@ function createQuestion(i){
     // cria o template do botão do quizz
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
 
-    console.log(answerTemplate)
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
 
-  })
+    letterBtn.textContent = letters[i];
+    answerText.textContent = answer['answer'];
+
+    answerTemplate.setAttribute('correct.answer', answer['correct']);
+
+    // remover hide e template class
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
+    // Inserir alternativa na tela
+    answersBox.appendChild(answerTemplate);
+
+    // Inserir um evento de clique no botão
+    answerTemplate.addEventListener('click', function(){
+      console.log(this);
+    });
+
+  });
+
+  // Incrementar o número da questão
+  actualQuestion++;
 
 }
 
