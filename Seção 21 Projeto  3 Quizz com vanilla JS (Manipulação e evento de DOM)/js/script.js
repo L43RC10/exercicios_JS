@@ -155,4 +155,6 @@ function checkAnswer(btn){
 }
 
 // Inicialização do Quizz
-init(); 
+init();
+
+.
