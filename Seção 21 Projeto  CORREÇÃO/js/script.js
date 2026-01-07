@@ -120,7 +120,7 @@ function createQuestion(i) {
     answersBox.appendChild(answerTemplate);
 
     answerTemplate.addEventListener("click", function(){
-      console.log(this);
+      checkAnswer(this);
     });
 
     // console.log(answerTemplate);
@@ -130,6 +130,55 @@ function createQuestion(i) {
   // Incrementar o número da questão
   actualQuestion++;
 
+}
+
+// Verificando respostas do usuario
+function checkAnswer(btn){
+
+  // Seleciona todos os botões
+  const buttons = answersBox.querySelectorAll("button");
+
+  // verifica se a resposta esta correta e add classes nos botões
+  buttons.forEach(function(button){
+    if(button.getAttribute("correct-answer") === "true"){
+
+      button.classList.add("correct-answer");
+
+      // checa se o usuario acertou a pergunta
+      if(btn === button){
+        // incremento dos pontos
+        points++;
+      }
+
+    } else {
+
+      button.classList.add("wrong-answer");
+
+    }
+
+  });
+
+  // Exibir a próxima pergunta
+  nextQuestion();
+
+}
+
+// Exibir a próxima pergunta do Quizz
+function nextQuestion(){
+
+  // timer para usuario ver as respostas
+  setTimeout(function(){
+
+    // verifica se ainda há perguntas
+    if(actualQuestion >= questions.length){
+
+      // apresentar msg de sucesso
+      createQuestion(actualQuestion);
+      
+    }
+
+  }, 1500);
+  
 }
 
 // inicialização do Quizz
