@@ -98,86 +98,10 @@ function createQuestion(i){
   questionText.textContent = questions[i].question;
   questionNumber.textContent = i + 1;
 
-  // INSERE AS ALTERNATIVAS
-  questions[i].answers.forEach(function(answer, i){
-
-    // CRIA TEMPLATE DO BOTÃO DO QUIZZ
-    const answerTemplate = document.querySelector(".answer-template").cloneNode(true);
-
-    const letterBtn = answerTemplate.querySelector(".btn-letter");
-    const answerText = answerTemplate.querySelector(".question-answer");
-
-    letterBtn.textContent = letters[i];
-    answerText.textContent = answer["answer"];
-
-    answerTemplate.setAttribute("correct-answer", answer["correct"]);
-
-    // REMOVER HIDE E TEMPLATE CLASS
-      answerTemplate.classList.remove("hide");
-      answerTemplate.classList.remove("answer-template");
-
-    // INSERIR ALTERNATIVA NA TELA
-    answerBox.appendChild(answerTemplate);
-
-    // INSERIR UM EVENTO DE CLICK NO BOTÃO
-    answerTemplate.addEventListener("click", function(){
-      checkAnswer(this);
-    });
-
-  });
-
-  // INCREMENTAR O NUMERO DA QUESTÃO
-  actualQuestion++;
-
 }
-
-// VERIFICANDO RESPOSTA DO USUARIO
-function checkAnswer(btn) {
-
-  // SELECIONA TODOS OS BOTÕES
-  const buttons = answerBox.querySelectorAll("button");
-
-  // VERIFICA SE A RESPOSTA ESTA CORRETA E ADD CLASSES AOS BOTÕES
-  buttons.forEach(function(button) {
-
-    if(button.getAttribute("correct-answer") === "true"){
-
-      button.classList.add("correct-answer");
-
-      // CHECA SE O USUSARIO ACERTOU A PERGUNTA
-      if(btn === button) {
-        // INCREMENTO DOS PONTOS
-        points++;
-      }
-
-    } else {
-
-      button.classList.add("wrong-answer");
-
-    }
-
-  });
-  
-  // EXIBIR PRÓXIMA PERGUNTA
-  nextQuestion();
-
-}
-
-// EXIBIR A PRÓXIMA PERGUNTA DO QUIZZ
-function nextQuestion() {
-
-  // TIMER PARA USUARIO VER AS RESPOSTAS
-  setTimeout(function(){
-
-    // VERIFICA SE AINDA HÁ PERGUNTAS
-    if(actualQuestion >= questions.length){
-      // APRESENTA A MSG DE SUCESSO
-    }
-
-    createQuestion(actualQuestion);
-
-  }, 1500);
 }
 
 // INICIALIZAÇÃO DO QUIZZ
+
+
 init();

@@ -1,6 +1,6 @@
-// DECLARAÇÃO DE VARIAVEIS
+// eclaração de variaveis
 const question = document.querySelector("#question");
-const answerBox = document.querySelector("#answers-box");
+const answersBox = document.querySelector("#answers-box");
 const quizzContainer = document.querySelector("#quizz-container");
 const scoreContainer = document.querySelector("#score-container");
 const letters = ["a", "b", "c", "d"];
@@ -75,78 +75,79 @@ const questions = [
   },
 ]
 
-// SUBSTITUIÇÃO DO QUIZZ PARA PRIMEIRA PERGUNTA
-function init(){
-  // CRIAR PRIMEIRA PERGUNTA
+// Substituição do quizz para a primeira pergunta
+function init() {
+  // criar a primeira pergunta
   createQuestion(0);
 }
 
-// CRIA UMA PERGUNTA
-function createQuestion(i){
+// Cria uma pergunta
+function createQuestion(i) {
 
-  // LIMPAR QUESTÃO ANTERIOR  
-  const oldButtons = answerBox.querySelectorAll("button");
+  // Limpar a questão anterior
+  const oldButtons = answersBox.querySelectorAll("button");
 
   oldButtons.forEach(function(btn){
     btn.remove();
   });
 
-  // ALTERAR TEXTO DA PERGUNTA
+  // Alterar o texto da pergunta
   const questionText = question.querySelector("#question-text");
   const questionNumber = question.querySelector("#question-number");
 
   questionText.textContent = questions[i].question;
   questionNumber.textContent = i + 1;
 
-  // INSERE AS ALTERNATIVAS
+  // Insere as alyternativas
   questions[i].answers.forEach(function(answer, i){
-
-    // CRIA TEMPLATE DO BOTÃO DO QUIZZ
+  
+    // Cria o template do botão do Quizz
     const answerTemplate = document.querySelector(".answer-template").cloneNode(true);
-
+  
     const letterBtn = answerTemplate.querySelector(".btn-letter");
     const answerText = answerTemplate.querySelector(".question-answer");
 
-    letterBtn.textContent = letters[i];
-    answerText.textContent = answer["answer"];
+    // letters.textContent = letters[i];
+    letterBtn.textContent = letters[i]
+    answerText.textContent = answer['answer'];
 
     answerTemplate.setAttribute("correct-answer", answer["correct"]);
 
-    // REMOVER HIDE E TEMPLATE CLASS
-      answerTemplate.classList.remove("hide");
-      answerTemplate.classList.remove("answer-template");
+    // Remover hide e template Class
+    answerTemplate.classList.remove("hide");
+    answerTemplate.classList.remove("answer-template");
+    
+    // Inserir a alternativa na tela
+    answersBox.appendChild(answerTemplate);
 
-    // INSERIR ALTERNATIVA NA TELA
-    answerBox.appendChild(answerTemplate);
-
-    // INSERIR UM EVENTO DE CLICK NO BOTÃO
     answerTemplate.addEventListener("click", function(){
       checkAnswer(this);
     });
 
+    // console.log(answerTemplate);
+  
   });
 
-  // INCREMENTAR O NUMERO DA QUESTÃO
+  // Incrementar o número da questão
   actualQuestion++;
 
 }
 
-// VERIFICANDO RESPOSTA DO USUARIO
-function checkAnswer(btn) {
+// Verificando respostas do usuario
+function checkAnswer(btn){
 
-  // SELECIONA TODOS OS BOTÕES
-  const buttons = answerBox.querySelectorAll("button");
+  // Seleciona todos os botões
+  const buttons = answersBox.querySelectorAll("button");
 
-  // VERIFICA SE A RESPOSTA ESTA CORRETA E ADD CLASSES AOS BOTÕES
-  buttons.forEach(function(button) {
-
+  // verifica se a resposta esta correta e add classes nos botões
+  buttons.forEach(function(button){
     if(button.getAttribute("correct-answer") === "true"){
 
       button.classList.add("correct-answer");
 
-      // CHECA SE O USUSARIO ACERTOU A PERGUNTA
-      if(btn === button) {
-        // INCREMENTO DOS PONTOS
+      // checa se o usuario acertou a pergunta
+      if(btn === button){
+        // incremento dos pontos
         points++;
       }
 
@@ -157,27 +158,29 @@ function checkAnswer(btn) {
     }
 
   });
-  
-  // EXIBIR PRÓXIMA PERGUNTA
+
+  // Exibir a próxima pergunta
   nextQuestion();
 
 }
 
-// EXIBIR A PRÓXIMA PERGUNTA DO QUIZZ
-function nextQuestion() {
+// Exibir a próxima pergunta do Quizz
+function nextQuestion(){
 
-  // TIMER PARA USUARIO VER AS RESPOSTAS
+  // timer para usuario ver as respostas
   setTimeout(function(){
 
-    // VERIFICA SE AINDA HÁ PERGUNTAS
+    // verifica se ainda há perguntas
     if(actualQuestion >= questions.length){
-      // APRESENTA A MSG DE SUCESSO
+
+      // apresentar msg de sucesso
+      createQuestion(actualQuestion);
+      
     }
 
-    createQuestion(actualQuestion);
-
-  }, 1500);
+  }, 150);
+  
 }
 
-// INICIALIZAÇÃO DO QUIZZ
+// inicialização do Quizz
 init();
