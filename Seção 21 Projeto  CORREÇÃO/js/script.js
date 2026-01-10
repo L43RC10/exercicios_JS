@@ -8,7 +8,6 @@ let points = 0;
 let actualQuestion = 0;
 
 // Perguntas
-
 const questions = [
   {
     "question": "PHP foi desenvolvido para qual fim?",
