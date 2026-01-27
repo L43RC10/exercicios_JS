@@ -171,11 +171,48 @@ function nextQuestion() {
     // VERIFICA SE AINDA HÁ PERGUNTAS
     if(actualQuestion >= questions.length){
       // APRESENTA A MSG DE SUCESSO
+      showSuccessMessage();
+      return;
     }
 
     createQuestion(actualQuestion);
 
   }, 1500);
+}
+
+// EXIBE A TELA FINAL
+function showSuccessMessage(){
+
+  hideOrShowQuizz();
+
+  // TROCAR DADOS DA TELA DE SUCESSO
+
+  // CALCULAR SCORE
+  const score = ((points / questions.length) * 100).toFixed(2);
+
+  const displayScore = document.querySelector("#display-score span");
+
+  console.log(score);
+
+  displayScore.textContent = score.toString();
+
+  // ALTERAR O NÚMERO DE PERGUNTAS CORRETAS
+  const correctAnswers = document.querySelector("#correct-answers");
+  correctAnswers.textContent = points;
+
+  // ALTERAR O TOTAL DE PERGUNTAS
+  const totalQuestions = document.querySelector("#questions-qty");
+  totalQuestions.textContent = questions.length;
+
+
+
+}
+
+function hideOrShowQuizz(){
+  
+quizzContainer.classList.toggle("hide");
+scoreContainer.classList.toggle("hide");
+
 }
 
 // INICIALIZAÇÃO DO QUIZZ
