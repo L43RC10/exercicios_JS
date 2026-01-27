@@ -215,5 +215,18 @@ scoreContainer.classList.toggle("hide");
 
 }
 
+// REINICIAR QUIZZ
+const restartBtn = document.querySelector("#restart");
+
+restartBtn.addEventListener("click", function() {
+
+  // ZERAR O JOGO
+  actualQuestion = 0;
+  points = 0;
+  hideOrShowQuizz();
+  init();
+
+})
+
 // INICIALIZAÇÃO DO QUIZZ
-init();
+init(); 
