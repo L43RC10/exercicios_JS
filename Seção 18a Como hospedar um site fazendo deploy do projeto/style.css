@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--bg);
-    counter-reset: var(--texto);
+    color: var(--texto);
 }
 
 .topo {
@@ -76,8 +76,10 @@ input {
     padding: .7rem .9rem;
     border: 1px solid var(--borda);
     border-radius: .5rem;
-    border-color: var(--bg);
+    border-color: var(--borda);
+    background-color: var(--bg);
     color: var(--texto);
+    outline: none;
 }
 
 .btn {
