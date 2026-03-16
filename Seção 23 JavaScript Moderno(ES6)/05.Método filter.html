@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ES6</title>
+</head>
+<body style="background-color: #333;">
+    <script>
+        // filter
+        const arr = [1,2,3,4,5];
+
+        const highNumbers = arr.filter((numero) => {
+            if(numero >= 3){
+                return numero;
+            }
+        });
+
+        console.log(highNumbers);
+
+        const users = [
+            {name: "Laercio", available: true},
+            {name: "Pedro", available: false},
+            {name: "João", available: false},
+            {name: "Maria", available: true},
+        ]
+
+        const availableUsers = users.filter((user) => user.available)
+        const notAvailableUsers = users.filter((user) => !user.available)
+
+        console.log(availableUsers);
+        console.log(notAvailableUsers);
+    </script>
+</body>
+</html>
