@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ES6</title>
+</head>
+<body style="background-color: #333;">
+    <script>
+        // 1 - var, let e const
+
+        var x = 10;
+        var y = 15;
+
+        if(y > 10){
+            var x = 5;
+            console.log(x);
+        }
+
+        console.log(x);
+
+        // === JS MODERNO ===
+        let a = 10;
+        let b = 15;
+
+        if(b > 10){
+            let a = 5;
+            console.log(`variavel dentro do escopo do if: ${a}`);
+        }
+
+        console.log(`variavel global: ${a}`);
+
+        let i = 100;
+
+        for(let i = 0; i < 5; i++){
+            console.log(i);
+        }
+
+        console.log(i);
+
+        function logName (){
+            const name = "Matheus";
+            console.log(name);
+        }
+
+        const name = "Pedro";
+        console.log(name);
+
+        logName();
+
+    </script>
+</body>
+</html>
