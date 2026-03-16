@@ -7,8 +7,72 @@
 </head>
 <body style="background-color: #333;">
     <script>
-        
+        // 2 arrow function
+        const soma = function soma(a, b){
+            return a + b;
+        }
+        console.log(soma(5,10));
 
+        // se for uma função simples, com arrow function não precisamos de corpo
+        const arrowSoma = (a,b) => a + b
+        console.log(arrowSoma(25,10));
+
+        // se for uma função mais complexa, com arrow function precisamos do corpo, ou seja, {}
+        const greetings = (name) => {
+            if(name) {
+                return `Olá ${name}!`;
+            } else {
+                return "Olá";
+            }
+        }
+
+        console.log(greetings("Laercio"));
+        console.log(greetings());
+
+
+
+
+        const testeArrow = () => console.log('testou!');
+
+        testeArrow();
+
+
+
+
+        // const user = {
+        //     name: "Laercio",
+        //     sayUserName() {
+        //         setTimeout(function(){
+        //             console.log(this);
+        //             console.log(`Username: ${this.name}`);
+        //         }, 500);
+        //     }        
+        // }
+
+        // correção com o "bindar"
+        const user = {
+            name: "Laercio",
+            sayUserName() {
+                var self = this;
+                setTimeout(function(){
+                    console.log(self);
+                    console.log(`Username: ${self.name}`);
+                }, 500);
+            },
+            
+            
+            sayUserNameArrow(){
+                setTimeout(() => {
+                    console.log(this);
+                    console.log(`Username: ${this.name}`)
+                }, 700)
+            },
+
+
+        }
+
+        user.sayUserName();
+        user.sayUserNameArrow();
     </script>
 </body>
 </html>
