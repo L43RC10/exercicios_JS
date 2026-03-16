@@ -7,7 +7,57 @@
 </head>
 <body style="background-color: #333;">
     <script>
-        
+        class Produto {
+            constructor(nome, preco) {
+                this.nome = nome
+                this.preco = preco
+            }
+
+            produtoComDesconto(desconto){
+                return this.preco * ((100 - desconto) / 100)
+            }
+        }
+
+        const camisa = new Produto('Camisa gola V', 20);
+
+        console.log(camisa.nome);
+
+        console.log(camisa.produtoComDesconto(10));
+        console.log(camisa.produtoComDesconto(25));
+
+        const tenis = new Produto('Tenis verde', 120);
+
+        console.log(tenis.produtoComDesconto(20))
+
+
+
+
+
+
+
+
+
+        // 9 herança
+        class ProdutoComAtributos extends Produto {
+            constructor(nome, preco, cores){
+                super(nome, preco);
+                this.cores = cores
+            }
+
+            mostrarCores(){
+                console.log('As cores são:')
+                this.cores.forEach((cor) => {
+                    console.log(cor);
+                })
+            }
+
+        }
+
+        const chapeu = new ProdutoComAtributos('Chapéu', 29.99, ['Preto', 'Azul', 'Verde']);
+
+        console.log(chapeu.nome);
+        console.log(chapeu.produtoComDesconto(30));
+        chapeu.mostrarCores();
     </script>
 </body>
 </html>
