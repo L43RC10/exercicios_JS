@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ES6</title>
+</head>
+<body style="background-color: #333;">
+    <script>
+        // 8 Classe
+
+        class Produto {
+            constructor(nome, preco) {
+                this.nome = nome
+                this.preco = preco
+            }
+
+            produtoComDesconto(desconto){
+                return this.preco * ((100 - desconto) / 100)
+            }
+        }
+
+        const camisa = new Produto('Camisa gola V', 20);
+
+        console.log(camisa.nome);
+
+        console.log(camisa.produtoComDesconto(10));
+        console.log(camisa.produtoComDesconto(25));
+
+        const tenis = new Produto('Tenis verde', 120);
+
+        console.log(tenis.produtoComDesconto(20))
+    </script>
+</body>
+</html>
